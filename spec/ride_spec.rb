@@ -69,5 +69,16 @@ RSpec.describe Ride do
 
         expect(ride2.can_board?(visitor1)).to eq(true)
     end 
+
+    it "#deduct_admission_fee" do
+        ride = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
+  
+        visitor = Visitor.new('Bruce', 54, '$10')
+        initial_spending_money = visitor.spending_money
+  
+        ride.deduct_admission_fee(visitor)
+  
+        expect(visitor.spending_money).to eq(initial_spending_money - ride.admission_fee)
+      end
     
 end

@@ -47,6 +47,9 @@ RSpec.describe Carnival do
         carnival.add_ride(ride2)
   
         expect(carnival.most_popular_ride).to eq(ride1)
-      end
+    end
+
+    # Was not able to finish the others. For most popular ride I would do something similar to as most popular ride but take it by total reveune.
+
 
 end
