@@ -18,4 +18,12 @@ class Visitor
     def parse_spending_money(spending_money)
         spending_money.delete("$").to_i
     end
+
+    def add_preference(preference)
+        @preferences << preference
+    end
+
+    def tall_enough?(threshold)
+        @height >= threshold
+    end
 end
