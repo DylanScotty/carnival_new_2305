@@ -19,4 +19,10 @@ RSpec.describe Visitor do
         end
     end
 
+    describe "#add_preferences" do
+        
+        it "can add preferences" do
+        end
+    end
+
 end
