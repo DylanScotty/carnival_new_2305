@@ -79,6 +79,6 @@ RSpec.describe Ride do
         ride.deduct_admission_fee(visitor)
   
         expect(visitor.spending_money).to eq(initial_spending_money - ride.admission_fee)
-      end
+    end
     
 end
