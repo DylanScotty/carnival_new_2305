@@ -21,9 +21,7 @@ class Ride
       deduct_admission_fee(visitor)
       update_rider_log(visitor)
     end
-  
-    private
-  
+
     def can_board?(visitor)
       visitor.tall_enough?(@min_height) && visitor.preferences.include?(@excitement)
     end

@@ -61,15 +61,13 @@ RSpec.describe Ride do
         expect(ride3.total_revenue).to eq(2)
     end
 
-    
+    it "#can_board" do
+        visitor1 = Visitor.new('Bruce', 54, '$10')
+        ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
 
+        visitor1.add_preference(:gentle)
 
-
-
-
-
-
-
-
+        expect(ride2.can_board?(visitor1)).to eq(true)
+    end 
     
 end
