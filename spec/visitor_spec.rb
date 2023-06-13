@@ -3,7 +3,7 @@ require './lib/visitor'
 RSpec.describe Visitor do
     describe "#initilize" do
 
-        it "has a name" do
+        it "exsist" do
             visitor1 = Visitor.new('Bruce', 54, '$10')
 
             expect(visitor1).to be_an(Visitor)
